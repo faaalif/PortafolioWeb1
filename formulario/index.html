@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volkswagen Potosina - Compras Online</title>
+    <style>
+        body {
+     margin: 20px;
+     background-image: url('https://www.solidbackgrounds.com/images/2560x1600/2560x1600-pale-pink-solid-color-background.jpg');
+     background-size: cover;
+     background-position: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        h3 {
+            margin-top: 20px;
+            text-align: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"], input[type="date"], input[type="number"], input[type="email"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .form-row div {
+            flex: 1;
+        }
+        .button-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+        .terms {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Volkswagen Potosina</h1>
+
+        <h3>Información general del cliente</h3>
+    <form>
+        
+        <div class="form-row">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="apellidoPaterno">Apellido Paterno:</label>
+                <input type="text" id="apellidoPaterno" name="apellidoPaterno">
+            </div>
+            <div>
+                <label for="apellidoMaterno">Apellido Materno:</label>
+                <input type="text" id="apellidoMaterno" name="apellidoMaterno">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div>
+                <label for="nombreUsuario">Nombre de Usuario:</label>
+                <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+            </div>
+            <div>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+            </div>
+            <div>
+                <label for="fechaRegistro">Fecha de Registro:</label>
+                <input type="date" id="fechaRegistro" name="fechaRegistro">
+            </div>
+        </div>
+
+        <h3>Datos para Facturar</h3>
+
+        <div class="form-row">
+            <div>
+                <label for="pais">País:</label>
+                <select id="pais" name="pais" required>
+                    <option value="Mexico">México</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="Canada">Canadá</option>
+                </select>
+            </div>
+            <div>
+                <label for="ciudad">Ciudad:</label>
+                <select id="ciudad" name="ciudad" required>
+                    <option value="Monterrey">Monterrey</option>
+                    <option value="Ciudad Valles">Ciudad Valles</option>
+                    <option value="San Luis Potosí">San Luis Potosí</option>
+                </select>
+            </div>
+            <div>
+                <label for="calle">Calle:</label>
+                <input type="text" id="calle" name="calle">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div>
+                <label for="numeroCasa">Número de Casa:</label>
+                <input type="number" id="numeroCasa" name="numeroCasa">
+            </div>
+            <div>
+                <label for="colonia">Colonia:</label>
+                <input type="text" id="colonia" name="colonia">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div>
+                <label for="rfc">R.F.C.:</label>
+                <input type="text" id="rfc" name="rfc" required>
+            </div>
+            <div>
+                <label for="codigoPostal">C.P.:</label>
+                <input type="text" id="codigoPostal" name="codigoPostal">
+            </div>
+            <div class="terms">
+                <label for="acepto">Acepto términos y condiciones:</label>
+                <input type="checkbox" id="acepto" name="acepto" required>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button type="submit">Enviar</button>
+            <button type="reset">Restablecer</button>
+        </div>
+    </form>
+    <footer>
+        <p>Febrero 2025, SLP.</p>
+    </footer>
+</body>
+</html>
