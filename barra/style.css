@@ -1,0 +1,25 @@
+ul{
+	list-style-type: none;
+	
+	width: 30%;
+	margin: 0px;
+	padding: 0px;
+}
+li a{
+	background-color: lightpink;
+	color: black;
+	display: block;
+	padding: 16px;
+	text-decoration: none;
+
+}
+
+li a:hover{
+	background-color: #ffa2e3;
+}
+
+li .activo{
+	background-color: lightcoral;
+	color: black;
+}
+
