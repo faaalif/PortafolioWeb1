@@ -1,0 +1,63 @@
+.capa1{
+	margin-left: 25%;
+	padding: 12px;
+
+}
+
+
+ul{
+	list-style-type: none;
+	
+	width: 15%;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	background-color: lightpink;
+	position: fixed;
+}
+li a{
+	background-color: lightpink;
+	color: black;
+	display: block;
+	padding: 16px;
+	text-decoration: none;
+
+}
+
+li a:hover{
+	background-color: #ffa2e3;
+}
+
+li a.activo{
+	background-color: lightcoral;
+	color: black;
+}
+
+h1{
+	  font-family: "Playfair Display", serif;
+}
+h2{
+	font-family: "Mulish", sans-serif;
+}
+@font-face{
+	font-family: "fuente1";
+	src: url(Overpass/Overpass-Italic-VariableFont_wght.ttf) 
+	format("truetype");
+}
+@font-face{
+	font-family: "fuente2";
+	src: url(Urbanist/Urbanist-Italic-VariableFont_wght.ttf) 
+	format("truetype");
+}
+
+p{
+	font-family: "fuente1";
+	font-size: 18px;
+	text-align: justify;
+}
+
+.t2{
+	font-family: "fuente2";
+	font-size: 18px;
+	text-align: justify;
+}
