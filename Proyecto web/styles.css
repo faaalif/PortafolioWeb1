@@ -1,0 +1,124 @@
+body {
+    background-color: #b3b3b3;
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #b3b3b3;
+    color: black;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.container {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 60px auto;
+    width: 80%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.car-models {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.car-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.car-card img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.car-card h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #0066b2;
+}
+
+.car-card p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #0066b2;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+/* pie de pag */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.social-links a:hover {
+    color: #0066b2;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Group</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/1200px-BMW.svg.png" type="image/png">
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="https://www.bmw.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/1200px-BMW.svg.png" alt="BMW Logo" class="logo">
+        </a>
+        <a href="#about">Sobre nosotros</a>
+        <a href="#models">Modelos</a>
+        <a href="#contact">Contacto</a>
+    </div>
+    
+    <div class="container" id="about">
+        <h1>BMW</h1>
+        <p> Somos una marca premium de automóviles líder en el mundo, y trabajamos todos los días para también ser una marca líder para personas apasionadas, talentosas, de mente abierta y creativas.</p>
+        <img src="https://www.bmw.com.ar/content/dam/bmw/common/all-models/m-series/bmw-m240i-xdrive-coupe/onepager/bmw-2-series-m240i-xdrive-coupe-onepager-sp-desktop.jpg" alt="BMW Group Logo">
+    </div>
+    
+    <div class="container" id="models">
+        <h2>Modelos Destacados</h2>
+        <div class="car-models">
+            <!-- BMW Serie 3 -->
+            <div class="car-card">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/bmw-serie-3-2023-2-1652861552.jpg?crop=0.858xw:0.643xh;0.142xw,0.273xh&resize=1200:*" alt="BMW Serie 3">
+                <h3>BMW Serie 3</h3>
+                <p><strong>Tipo:</strong> Sedán</p>
+                <p><strong>Motor:</strong> 2.0L Turbo</p>
+                <p><strong>Potencia:</strong> 255 HP</p>
+                <p><strong>Precio:</strong> $1,200,000 MXN</p>
+            </div>
+            
+            <!-- BMW X5 -->
+            <div class="car-card">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/2024-bmw-x5-m60i-102-6602d48787fb7.jpg?crop=0.790xw:0.591xh;0.103xw,0.214xh&resize=1200:*" alt="BMW X5">
+                <h3>BMW X5</h3>
+                <p><strong>Tipo:</strong> SUV</p>
+                <p><strong>Motor:</strong> 3.0L Turbo</p>
+                <p><strong>Potencia:</strong> 335 HP</p>
+                <p><strong>Precio:</strong> $1,800,000 MXN</p>
+            </div>
+            
+            <!-- BMW i4 -->
+            <div class="car-card">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/captura-de-pantalla-2022-03-31-a-las-13-23-11-1648726793.jpg?crop=0.790xw:0.739xh;0,0.261xh&resize=1200:*" alt="BMW i4">
+                <h3>BMW i4</h3>
+                <p><strong>Tipo:</strong> Eléctrico</p>
+                <p><strong>Motor:</strong> Eléctrico</p>
+                <p><strong>Potencia:</strong> 340 HP</p>
+                <p><strong>Precio:</strong> $1,500,000 MXN</p>
+            </div>
+
+            <!-- BMW M4 -->
+            <div class="car-card">
+                <img src="https://pictures.dealer.com/g/gengrasbmw/1134/31ad0c7f2f24c0778211f1ce114ed7cfx.jpg" alt="BMW M4">
+                <h3>BMW M4</h3>
+                <p><strong>Tipo:</strong> Coupé Deportivo</p>
+                <p><strong>Motor:</strong> 3.0L Twin-Turbo</p>
+                <p><strong>Potencia:</strong> 503 HP</p>
+                <p><strong>Precio:</strong> $2,500,000 MXN</p>
+            </div>
+
+            <!-- BMW iX -->
+            <div class="car-card">
+                <img src="https://hips.hearstapps.com/vidthumb/images/bmw-ix-4-1605108707.jpg?crop=0.742xw:0.626xh;0.0604xw,0.315xh&resize=1200:*" alt="BMW iX">
+                <h3>BMW iX</h3>
+                <p><strong>Tipo:</strong> SUV Eléctrico</p>
+                <p><strong>Motor:</strong> Eléctrico</p>
+                <p><strong>Potencia:</strong> 516 HP</p>
+                <p><strong>Precio:</strong> $2,200,000 MXN</p>
+            </div>
+
+            <!-- BMW Z4 -->
+            <div class="car-card">
+                <img src="https://hips.hearstapps.com/es.h-cdn.co/cades/contenidos/60761/bmw-z4-m40i-tuning-g-power-port.jpg?crop=0.888888888888889xw:1xh;center,top&resize=1200:*" alt="BMW Z4">
+                <h3>BMW Z4</h3>
+                <p><strong>Tipo:</strong> Roadster</p>
+                <p><strong>Motor:</strong> 3.0L Turbo</p>
+                <p><strong>Potencia:</strong> 382 HP</p>
+                <p><strong>Precio:</strong> $1,900,000 MXN</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="contact">
+        <h2>Contáctanos</h2>
+        <div class="form-container">
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/BMW" target="_blank">Facebook</a>
+            <a href="https://x.com/bmw?lang=es" target="_blank">X</a>
+            <a href="https://www.instagram.com/BMW" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/BMW" target="_blank">YouTube</a>
+        </div>
+        <p>&copy; 2025 BMW Group. Todos los derechos reservados.</p>
+        <p>Fatima Lisset Vazquez Flores 186495</p>
+        <p>Gabriel Jimenez Figueroa 187859</p>
+    </footer>
+</body>
+</html>
