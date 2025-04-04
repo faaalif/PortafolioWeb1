@@ -1,0 +1,88 @@
+/* Reset básico */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del cuerpo */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #f9d9f7;
+    color: black;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* Sección principal */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos de la sección */
+section {
+    margin: 20px 0;
+}
+
+/* Estilos de los cuadros con unidades */
+.box {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Unidades específicas */
+.box.px {
+    background-color: #84cae7;
+    width: 100px;
+    height: 100px;
+}
+
+.box.em {
+    background-color: #7893e8;
+    width: 10em;
+    height: 10em;
+}
+
+.box.rem {
+    background-color: #2f3a7f;
+    width: 10rem;
+    height: 10rem;
+}
+
+.box.vw {
+    background-color: #9B59B6;
+    width: 10vw;
+    height: 10vw;
+}
+
+.box.vh {
+    background-color: #c3a8f4;
+    width: 10vh;
+    height: 10vh;
+}
+
+.box.percent {
+    background-color: #6a4d8a;
+    width: 20%;
+    height: 20%;
+}
+footer {
+    background-color: #f9d9f7;
+    color: black;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+
