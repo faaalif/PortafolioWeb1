@@ -1,0 +1,67 @@
+* {
+    margin: 5;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1554034483-04fda0d3507b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+/* Estilos para la galería */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;     
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.imagen img {
+    width: 270px;
+    height: auto;
+    border: 4px solid #7c7c7c;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+}
+
+.galeria {
+    visibility: visible;
+}
+
+#mostrar {
+    font-family: fantasy;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f1b4c7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+#mostrar:hover {
+    background-color: #e57094;
+    color: black;
+}
+
+#mostrar:hover ~ .galeria {
+    visibility: hidden;
+}
