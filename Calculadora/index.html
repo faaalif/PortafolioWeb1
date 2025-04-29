@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operaciones con JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="operaciones.js" defer></script>
+</head>
+<body>
+  <section>
+    <h1>Operaciones</h1>
+    <form>
+      <label for="num1">Escribe un numero:</label>
+      <input type="text" name="num1" id="num1" placeholder="Escribe un numero">
+      
+      <label for="num2">Escribe un numero:</label>
+      <input type="text" name="num2" id="num2" placeholder="Escribe un numero">
+      
+      <div class="botones">
+        <input type="button" name="suma" id="suma" value="Suma" onclick="sumar()">
+        <input type="button" name="resta" id="resta" value="Resta" onclick="restar()">
+        <input type="button" name="multiplicacion" id="multiplicacion" value="Multiplicación" onclick="multiplicar()">
+        <input type="button" name="division" id="division" value="División" onclick="dividir()">
+      </div>
+    </form>
+    <h2>El resultado es:</h2>
+    <p id="resultado"></p>
+  </section>
+</body>
+</html>
