@@ -1,0 +1,195 @@
+/* Estilo Cyberpunk: Edgerunners MEJORADO */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap');
+
+body {
+    background-color: #0a0a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 255, 252, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 0, 153, 0.05) 0%, transparent 20%),
+        linear-gradient(to bottom, rgba(10, 10, 30, 0.9), rgba(20, 5, 40, 0.9));
+    background-attachment: fixed;
+}
+
+.center {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(10, 10, 30, 0.7);
+    border: 1px solid #ff0099;
+    box-shadow: 0 0 20px rgba(255, 0, 153, 0.3),
+                inset 0 0 15px rgba(0, 255, 252, 0.2);
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: #ff0099;
+    text-shadow: 0 0 10px #ff0099, 
+                 0 0 20px rgba(255, 0, 153, 0.5);
+    letter-spacing: 2px;
+    margin: 0.5rem 0;
+    font-size: 2.8rem;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    color: #00fffc;
+    text-shadow: 0 0 5px #00fffc;
+    border-bottom: 2px solid #ff0099;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+
+h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    color: #ff0099;
+    border-left: 3px solid #00fffc;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+}
+
+section {
+    background: rgba(20, 5, 40, 0.8);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 255, 252, 0.3);
+    box-shadow: 0 0 15px rgba(0, 255, 252, 0.1);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Rajdhani', sans-serif;}
+
+section::before {
+    font-family: 'Rajdhani', sans-serif;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff0099, #00fffc);
+}
+
+article {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 1rem 0;
+}
+
+ol, ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ol li, ul li {
+    padding: 0.7rem 0;
+    position: relative;
+    padding-left: 2rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+}
+
+ol li::before {
+    content: "■";
+    color: #ff0099;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+ul li::before {
+    content: "▸";
+    color: #00fffc;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+a {
+    color: #00fffc;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 600;
+    position: relative;
+}
+
+a:hover {
+    color: #ff0099;
+    text-shadow: 0 0 5px #ff0099;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff0099;
+    transition: width 0.3s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Efecto de neón mejorado */
+@keyframes neon-pulse {
+    0%, 100% {
+        text-shadow: 0 0 5px #ff0099, 
+                    0 0 10px #ff0099;
+    }
+    50% {
+        text-shadow: 0 0 15px #ff0099, 
+                    0 0 30px #ff0099,
+                    0 0 45px rgba(255, 0, 153, 0.5);
+    }
+}
+
+.center h1 {
+    animation: neon-pulse 2s infinite ease-in-out;
+}
+
+/* Efecto de terminal */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(
+            rgba(0, 255, 252, 0.03) 50%, 
+            transparent 50%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 0, 153, 0.03) 50%,
+            transparent 50%
+        );
+    background-size: 100% 6px, 6px 100%;
+    pointer-events: none;
+    z-index: 100;
+    mix-blend-mode: overlay;
+}
+
+/* Efecto de distorsión en hover para títulos */
+h1, h2, h3 {
+    transition: text-shadow 0.3s;
+}
+
+h1:hover, h2:hover, h3:hover {
+    text-shadow: 0 0 10px currentColor,
+                 0 0 20px currentColor;
+}
