@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Conocimientos de Programación Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Diagnóstico de Conocimientos de Programación Web</h1>
+    
+    <div class="form-container">
+        <form id="diagnosticForm">
+            <div class="question">
+                <h3>1. ¿Qué significa HTML?</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1a" value="a">
+                        <label for="q1a">Hyperlinks and Text Markup Language</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1b" value="b">
+                        <label for="q1b">Hyper Text Markup Language</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1c" value="c">
+                        <label for="q1c">Home Tool Markup Language</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3>2. ¿Qué propiedad CSS se usa para cambiar el color de fondo?</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2a" value="a">
+                        <label for="q2a">bgcolor</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2b" value="b">
+                        <label for="q2b">background-color</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2c" value="c">
+                        <label for="q2c">color-background</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3>3. ¿Cómo se declara una variable en JavaScript?</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3a" value="a">
+                        <label for="q3a">variable x;</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3b" value="b">
+                        <label for="q3b">var x;</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3c" value="c">
+                        <label for="q3c">v x;</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3>4. ¿Qué etiqueta HTML se usa para enlazar un archivo CSS?</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4a" value="a">
+                        <label for="q4a">&lt;script&gt;</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4b" value="b">
+                        <label for="q4b">&lt;style&gt;</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4c" value="c">
+                        <label for="q4c">&lt;link&gt;</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3>5. ¿Qué método JavaScript se usa para seleccionar un elemento por su ID?</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5a" value="a">
+                        <label for="q5a">document.querySelector()</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5b" value="b">
+                        <label for="q5b">document.getElementById()</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5c" value="c">
+                        <label for="q5c">document.getElementByClass()</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" id="submitBtn">Evaluar respuestas</button>
+        </form>
+    </div>
+    
+    <div class="results" id="results">
+        <h2>Resultados del Diagnóstico</h2>
+        <div class="score" id="score"></div>
+        
+        <div class="chart-container">
+            <canvas id="resultsChart"></canvas>
+        </div>
+        
+        <div class="feedback" id="feedback"></div>
+        
+        <button type="button" id="generatePdfBtn">Generar PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

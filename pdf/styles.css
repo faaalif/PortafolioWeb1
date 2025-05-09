@@ -1,0 +1,159 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #121212;
+}
+
+h1 {
+    color: #ff66b2; /* Rosa */
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 8px rgba(255, 102, 178, 0.3);
+}
+
+.form-container {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(159, 89, 255, 0.2);
+    margin-bottom: 30px;
+    border: 1px solid #9f59ff; /* Morado */
+}
+
+.question {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.question:last-child {
+    border-bottom: none;
+}
+
+.question h3 {
+    margin-top: 0;
+    color: #9f59ff; /* Morado */
+}
+
+.options {
+    margin-left: 20px;
+}
+
+.option {
+    margin-bottom: 10px;
+}
+
+.option input[type="radio"] {
+    accent-color: #ff66b2; /* Rosa */
+}
+
+.option label {
+    margin-left: 8px;
+}
+
+button {
+    background-color: #9f59ff; /* Morado */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(159, 89, 255, 0.3);
+}
+
+button:hover {
+    background-color: #ff66b2; /* Rosa */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 102, 178, 0.4);
+}
+
+.results {
+    display: none;
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(159, 89, 255, 0.2);
+    margin-bottom: 30px;
+    border: 1px solid #9f59ff; /* Morado */
+}
+
+.results h2 {
+    color: #ff66b2; /* Rosa */
+    margin-top: 0;
+    text-align: center;
+}
+
+.score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #9f59ff; /* Morado */
+    margin: 15px 0;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(159, 89, 255, 0.3);
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #252525;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #252525;
+    border: 1px solid #333;
+}
+
+.feedback h3 {
+    color: #ff66b2; /* Rosa */
+    margin-top: 0;
+}
+
+.correct {
+    color: #9f59ff; /* Morado */
+    position: relative;
+    padding-left: 20px;
+}
+
+.correct::before {
+    content: "✓";
+    color: #4caf50;
+    position: absolute;
+    left: 0;
+}
+
+.incorrect {
+    color: #ff6666; /* Rosa oscuro */
+    position: relative;
+    padding-left: 20px;
+}
+
+.incorrect::before {
+    content: "✗";
+    color: #f44336;
+    position: absolute;
+    left: 0;
+}
+
+/* Estilos para el gráfico */
+canvas {
+    background-color: #252525;
+    border-radius: 4px;
+    padding: 10px;
+}
