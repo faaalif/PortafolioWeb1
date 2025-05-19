@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tareas Pendientes</h1>
+        <div class="task-input-container">
+            <input type="text" id="taskInput" placeholder="Añadir nueva tarea...">
+            <button id="addTaskBtn" onclick="addTask()">Agregar</button>
+        </div>
+        <ul id="taskList"></ul>
+        <button id="removeCompletedBtn" onclick="removeCompletedTasks()">Eliminar completadas</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
