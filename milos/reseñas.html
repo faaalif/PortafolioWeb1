@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulario de Comentarios del Cliente</title>
+    <link rel="stylesheet" href="nav.css" />
+    <script type="text/javascript" src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div class="nav">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <div class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Novedades</a></li>
+            <li><a href="caba.html">Caballero</a></li>
+            <li><a href="dama.html">Dama</a></li>
+            <li><a href="rese.html">Reseñas</a></li>
+            <li><a href="chatbot.html">Ayuda</a></li>
+        </div>
+    </div>
+
+    <form id="feedbackForm">
+        <br /><br /><br />
+        <h1>Formulario de Comentarios del Cliente</h1>
+        <p style="text-align: center; color: #555;">
+            ¡Sus comentarios son muy importantes para nosotros!
+        </p>
+
+        <div class="form-section">
+            <h2>Información del comprador</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombres">Nombre(s)</label>
+                    <input type="text" id="nombres" name="nombres" required />
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellido(s)</label>
+                    <input type="text" id="apellidos" name="apellidos" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Dirección Email</label>
+                <input type="email" id="email" name="email" required />
+                <p class="privacy-note">
+                    Nunca compartiremos tu correo electrónico con nadie más.
+                </p>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="include-phone" name="include-phone" />
+                <label for="include-phone">Incluir número telefónico</label>
+            </div>
+            <div class="phone-field form-group">
+                <label for="telefono">Número Telefónico</label>
+                <input type="tel" id="telefono" name="telefono" />
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Sección de comentarios</h2>
+            <p>
+                Agradeceríamos que se tomara un momento para darnos su opinión sobre
+                nuestros servicios.
+            </p>
+            <div class="question">
+                En general, ¿qué tan satisfecho está con nuestros servicios?
+            </div>
+            <div class="rating-container" id="ratingContainer">
+                <div class="rating-option" data-value="1">
+                    <div class="rating-emoji">☹️</div>
+                    <div class="tooltip">Muy insatisfecho</div>
+                    <input type="radio" name="satisfaccion" value="1" style="display: none" />
+                </div>
+                <div class="rating-option" data-value="2">
+                    <div class="rating-emoji">🙁</div>
+                    <div class="tooltip">Insatisfecho</div>
+                    <input type="radio" name="satisfaccion" value="2" style="display: none" />
+                </div>
+                <div class="rating-option" data-value="3">
+                    <div class="rating-emoji">😐</div>
+                    <div class="tooltip">Neutral</div>
+                    <input type="radio" name="satisfaccion" value="3" style="display: none" />
+                </div>
+                <div class="rating-option" data-value="4">
+                    <div class="rating-emoji">🙂</div>
+                    <div class="tooltip">Satisfecho</div>
+                    <input type="radio" name="satisfaccion" value="4" style="display: none" />
+                </div>
+                <div class="rating-option" data-value="5">
+                    <div class="rating-emoji">😀</div>
+                    <div class="tooltip">Muy satisfecho</div>
+                    <input type="radio" name="satisfaccion" value="5" style="display: none" />
+                </div>
+            </div>
+
+            <div class="question">¿Nuestro producto cumplió con tus expectativas?</div>
+            <div class="expectations-container" id="expectationsContainer">
+                <div class="expectation-option" data-value="supero">
+                    <div class="custom-radio"></div>
+                    <div>Superó las expectativas</div>
+                    <input
+                        type="radio"
+                        name="expectativas"
+                        value="supero"
+                        style="display: none"
+                    />
+                </div>
+                <div class="expectation-option" data-value="cumplio">
+                    <div class="custom-radio"></div>
+                    <div>Cumplió con las expectativas</div>
+                    <input
+                        type="radio"
+                        name="expectativas"
+                        value="cumplio"
+                        style="display: none"
+                    />
+                </div>
+                <div class="expectation-option" data-value="debajo">
+                    <div class="custom-radio"></div>
+                    <div>Por debajo de las expectativas</div>
+                    <input
+                        type="radio"
+                        name="expectativas"
+                        value="debajo"
+                        style="display: none"
+                    />
+                </div>
+                <div class="expectation-option" data-value="otro">
+                    <div class="custom-radio"></div>
+                    <div>Otro (por favor especifique)</div>
+                    <input
+                        type="radio"
+                        name="expectativas"
+                        value="otro"
+                        style="display: none"
+                    />
+                </div>
+                <div class="other-input">
+                    <input type="text" name="otro_especificar" placeholder="Especificar..." />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Ingresa tus pensamientos</h2>
+            <h3>Comentarios adicionales</h3>
+            <textarea
+                id="comentarios"
+                name="comentarios"
+                placeholder="Escribe tus comentarios aquí..."
+            ></textarea>
+            <div class="checkbox-option">
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="terms"
+                    >Acepto los Términos y Condiciones y la Política de Privacidad.</label>
+            </div>
+            <button type="submit" class="submit-btn">Enviar Comentarios</button>
+        </div>
+
+       <button id="downloadPDF" type="button">Descargar PDF</button>
+
+    </form>
+
+</body>
+</html>

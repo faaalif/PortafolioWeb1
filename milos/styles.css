@@ -1,0 +1,78 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+  color: #1c1c1c;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #d4af37; 
+}
+
+.chatbot-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); 
+  padding: 20px;
+}
+
+.chatbox {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9; 
+  border-radius: 5px;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  line-height: 1.4;
+}
+
+.message.user {
+  background-color: #d4af37; 
+  color: #1c1c1c;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.message.bot {
+  background-color: #e0e0e0; 
+  color: #000;
+}
+
+form {
+  display: flex;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #999;
+  outline: none;
+  font-size: 14px;
+}
+
+button {
+  background-color: #d4af37; 
+  color: #1c1c1c;
+  border: none;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #c29e2d;
+}

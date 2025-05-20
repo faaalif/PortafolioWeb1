@@ -1,0 +1,164 @@
+/* Estilos exclusivos para el footer */
+@import url("https://fonts.googleapis.com/css?family=IBM%20Plex%20Sans:500|IBM%20Plex%20Sans:300");
+
+:root {
+  --m: 4rem;
+}
+
+/* Reset para evitar interferencias */
+footer#footer,
+footer#footer * {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans";
+  scroll-behavior: auto;
+}
+
+footer#footer {
+
+  font-family: "IBM Plex Sans";
+  color: white;
+  margin-top: 0;
+  z-index: 500;
+  width: 100%;
+  height: auto;
+  min-height: 70vh;
+  display: flex;
+  
+  
+  align-items: flex-end;
+  padding: 5rem 2vw;
+  position: relative;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+footer#footer .backdrop {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0) 60%
+  );
+}
+
+footer#footer .col {
+  font-family: "IBM Plex Sans";
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
+  width: 28%;
+  margin-bottom: 2rem;
+}
+
+footer#footer .col2,
+footer#footer .col3 {
+  font-family: "IBM Plex Sans";
+  background-color: #121212;
+  border-radius: calc(0.5 * var(--m));
+}
+
+footer#footer img {
+  height: calc(0.3 * var(--m));
+  object-fit: cover;
+}
+
+footer#footer .social {
+  font-family: "IBM Plex Sans";
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+footer#footer .link {
+  width: calc(0.8 * var(--m));
+  height: calc(0.8 * var(--m));
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: calc(0.1 * var(--m));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer#footer h3 {
+  font-family: "IBM Plex Sans";
+  font-weight: 500;
+  font-size: calc(0.6 * var(--m));
+  margin: 0 0 1rem 0;
+}
+
+footer#footer p {
+  font-family: "IBM Plex Sans";
+  margin: 0.5rem 0;
+  font-weight: 300;
+}
+
+/* Estilos específicos para iconos de redes sociales */
+.social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: calc(0.1 * var(--m));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: white !important;
+}
+
+.social-link.fb {
+  background-color: #1877F2; /* Azul Facebook */
+}
+
+.social-link.ig {
+  background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); /* Gradiente Instagram */
+}
+
+.social-link.wa {
+  background-color: #25D366; /* Verde WhatsApp */
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.social-link ion-icon {
+  font-size: 1.3rem;
+}
+/* Responsive */
+@media screen and (max-width: 1000px) {
+  :root {
+    --m: 3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  footer#footer {
+    font-family: "IBM Plex Sans";
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 10vw;
+  }
+  footer#footer .col {
+    font-family: "IBM Plex Sans";
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}

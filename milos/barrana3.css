@@ -1,0 +1,99 @@
+/* Contenedor específico para la barra */
+.nav-container {
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos encapsulados */
+.nav-container .barra-nav {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container .barra-nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav-container .barra-nav ul li {
+  margin: 0 20px;
+  transition: 0.5s;
+  color: black;
+}
+
+.nav-container .barra-nav ul li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: black;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+/* Efectos solo aplican al hover sobre la barra */
+.nav-container .barra-nav:hover ul li a {
+  transform: scale(1.1);
+  opacity: 0.4;
+  filter: blur(1px);
+}
+
+.nav-container .barra-nav ul li a:hover {
+  transform: scale(1.2) !important;
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  color: #fff;
+  background: #000000;
+}
+
+.nav-container .barra-nav ul li a:before {
+  color: black;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #c9ae3e;
+background: linear-gradient(329deg, rgba(201, 174, 62, 1) 0%, rgba(255, 255, 0, 1) 100%);
+  transition: transform 0.5s ease;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+  border-radius: 3px;
+}
+
+.nav-container .barra-nav ul li a:hover:before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-container .barra-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-container .barra-nav ul li {
+    margin: 5px 10px;
+  }
+}

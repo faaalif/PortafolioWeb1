@@ -1,0 +1,336 @@
+:root {
+  --primary: #0ebac5;
+  --secondary: #BA6573;
+  --dark: #121212;
+  --light: #e5e5e5;
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #fff;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+  z-index: 1;
+}
+
+.hero-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  padding: 0 5vw;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  background: #fbff00;
+background: linear-gradient(90deg, rgba(251, 255, 0, 1) 0%, rgba(230, 87, 16, 1) 54%, rgba(84, 0, 0, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+  max-width: 80%;
+  font-weight: 300;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fbff00;
+background: linear-gradient(90deg, rgba(251, 255, 0, 1) 0%, rgba(230, 87, 16, 1) 54%, rgba(84, 0, 0, 1) 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.hero-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 239, 22, 0.8);
+}
+
+/* Carrusel de Perfumes */
+.perfume-carousel {
+  padding: 5rem 0;
+  position: relative;
+  background: #000000;
+background: linear-gradient(321deg, rgba(0, 0, 0, 1) 0%, rgba(33, 30, 30, 1) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  color: var(--light);
+}
+
+.section-titlel {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  color: var(--dark);  
+}
+
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 2rem;
+  padding: 2rem 0;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+  flex: 0 0 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.carousel-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.carousel-info {
+  padding: 1.5rem;
+}
+
+.carousel-title {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: var(--light);
+}
+
+.carousel-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  display: inline-block; /* Asegura que el gradiente se aplique correctamente */
+  transition: var(--transition);
+}
+
+.carousel-item:hover .carousel-price {
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+  transform: scale(1.05);
+}
+
+/* Carrusel de Marcas */
+.brands-section {
+  color: black;
+  padding: 4rem 0;
+  background: #ffffff;
+  background: linear-gradient(329deg, rgba(255, 255, 255, 1) 0%, rgba(148, 148, 148, 1) 100%);
+}
+
+.brands-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.brand-item {
+  flex: 0 0 150px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.brand-item:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.brand-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Sección de Beneficios */
+.benefits {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,1));
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #FFD700 0%, #FFEC8B 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.7));
+  transition: var(--transition);
+}
+
+.benefit-card:hover .benefit-icon {
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.9));
+}
+
+.benefit-title {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.benefit-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-content {
+    width: 70%;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+  
+  .hero-content {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-description {
+    max-width: 100%;
+    margin: 1.5rem auto;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .carousel-item {
+    flex: 0 0 250px;
+  }
+  
+  .benefit-icon {
+    font-size: 2.5rem;
+  }
+  
+  .benefit-title {
+    font-size: 1.3rem;
+  }
+}
